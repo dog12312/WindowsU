@@ -10,7 +10,6 @@ function closeBootScreen() {
 }
 function showLoginScreen() {
     document.getElementById("Login").style.display = "block";
-    document.getElementById('AccountName').innerHTML = Name();
 }
 function closeLoginScreen() {
     document.getElementById("Login").style.display = "none";
@@ -21,3 +20,4 @@ function showDesktop() {
 function closeDesktop() {
     document.getElementById("Desktop").style.display = "none";
 }
+document.getElementById('AccountName').innerHTML = Name;

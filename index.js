@@ -20,4 +20,4 @@ function showDesktop() {
 function closeDesktop() {
     document.getElementById("Desktop").style.display = "none";
 }
-alert(Name);
+document.getElementById('AccountName').innerHTML = Name();

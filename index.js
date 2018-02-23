@@ -1,4 +1,7 @@
 var Name = localStorage.getItem("Name");
+if (Name == "" || Name == null) {
+  Name = "SteamyPickel";
+}
 
 setTimeout(function() { closeBootScreen();showLoginScreen(); },3000);
 

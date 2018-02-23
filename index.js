@@ -7,7 +7,7 @@ setTimeout(function() { closeBootScreen();showLoginScreen(); },3000);
 function showBootScreen() {
     document.getElementById("BootScreen").style.display = "block";
 }
-function closeBootScreen();() {
+function closeBootScreen() {
     document.getElementById("BootScreen").style.display = "none";
 }
 function showLoginScreen() {

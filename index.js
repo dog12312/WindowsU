@@ -1,6 +1,8 @@
 var Name = localStorage.getItem("Name");
 document.getElementById('AccountName').innerHTML = Name;
 
+setTimeout(function() { closeBootScreen();showLoginScreen();,3000);
+
 function showBootScreen() {
     document.getElementById("BootScreen").style.display = "block";
 }

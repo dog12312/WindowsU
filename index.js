@@ -1,4 +1,4 @@
-var Name = localStorage.getItem("Name");
+var Name = "Account";
 if (Name == "" || Name == null) {
   Name = "SteamyPickel";
 }

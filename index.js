@@ -1,4 +1,3 @@
-var Name = "Account";
 if (Name == "" || Name == null) {
   Name = "SteamyPickel";
 }

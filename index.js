@@ -1,20 +1,20 @@
-setTimeout(function() { closeBootScreen();showLoginScreen(); },3000);
+setTimeout(function() { hideBootScreen();showLoginScreen(); },3000);
 
 function showBootScreen() {
     document.getElementById("BootScreen").style.display = "block";
 }
-function closeBootScreen() {
+function hideBootScreen() {
     document.getElementById("BootScreen").style.display = "none";
 }
 function showLoginScreen() {
     document.getElementById("Login").style.display = "block";
 }
-function closeLoginScreen() {
+function hideLoginScreen() {
     document.getElementById("Login").style.display = "none";
 }
 function showDesktop() {
     document.getElementById("Desktop").style.display = "block";
 }
-function closeDesktop() {
+function hideDesktop() {
     document.getElementById("Desktop").style.display = "none";
 }

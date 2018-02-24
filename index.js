@@ -1,4 +1,4 @@
-if (Name == "" || Name == null) {
+if (Name == null) {
   Name = "SteamyPickel";
 }
 

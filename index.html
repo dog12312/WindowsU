@@ -23,8 +23,9 @@
   </div>
 </div>
 <script>
-if (Name == "null") {
+if (Name == "") {
   Name = "SteamyPickel";
+  localStorage.setItem("Name", Name);
 }
 document.getElementById("AccountName").innerHTML = Name;
 </script>

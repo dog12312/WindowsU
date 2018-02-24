@@ -1,7 +1,3 @@
-if (Name == null) {
-  Name = "SteamyPickel";
-}
-
 setTimeout(function() { closeBootScreen();showLoginScreen(); },3000);
 
 function showBootScreen() {

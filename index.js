@@ -29,5 +29,5 @@ if (AccountPassword != "" || AccountPasswordAccountPassword != null) {
     hideLoginScreen();
     showDesktop();
   } else {alert('Wrong Password. ' + PasswordEntered + ' is not right.');}
-} else {alert('Wrong Password');}
+} else { hideLoginScreen();showDesktop(); }
 }

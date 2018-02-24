@@ -15,10 +15,15 @@
   <div align="center" style="color: #ffffff;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);">
     <h1 id="AccountName">?Unknow?</h1>  
   </div>
-  <script>document.getElementById("AccountName").innerHTML = Name;</script>
 </div>
 <div id="Desktop" style="display:none;">
   <div class="taskbar">
     Windows Button
   </div>
 </div>
+<script>
+if (Name == null) {
+  Name = "SteamyPickel";
+}
+document.getElementById("AccountName").innerHTML = Name;
+</script>

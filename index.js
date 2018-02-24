@@ -18,3 +18,16 @@ function showDesktop() {
 function hideDesktop() {
     document.getElementById("Desktop").style.display = "none";
 }
+
+var WindowUAccountPassword = localStorage.getItem("WindowUAccountPassword");
+var PasswordEntered;
+
+function CheckPassword() {
+PasswordEntered = document.getElementById("PasswordInput").value;
+if (WindowUAccountPassword != "" || WindowUAccountPassword != null) {
+  if (PasswordEntered == WindowUAccountPassword) {
+    hideLoginScreen();
+    showDesktop();
+  } else {alert('Wrong Password. ' + PasswordEntered + ' is not right.');}
+} else { hideLoginScreen();showDesktop(); }
+}

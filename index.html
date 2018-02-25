@@ -37,7 +37,11 @@
   
 <script>
 var StartAnimation = document.getElementById("StartupAnimation"); 
-
+StartupAnimation.onended = function() {
+  hideBootScreen();
+  showLoginScreen();
+};
+  
 if (Name == "") {
   Name = "SteamyPickel";
   localStorage.setItem("Name", Name);
@@ -46,7 +50,6 @@ document.getElementById("AccountName").innerHTML = Name;
 function Loaded() {
   document.getElementById("loader").style.display = "none";
   document.getElementById("BootScreen").style.display = "block";
-  setTimeout(function() { hideBootScreen();showLoginScreen(); },5000);
   StartAnimation.play();
 }
 </script>

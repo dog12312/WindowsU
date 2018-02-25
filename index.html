@@ -10,7 +10,7 @@
 <div id="loader"></div>
 <div id="BootScreen" style="display:none;">
   <div align="center" style="color:#ffffff;">
-    <video width="100%" height="100%" autoplay>
+    <video id="StartupAnimation" width="100%" height="100%">
       <source src="/WindowsU/C/Windows/System92/Bootup/Startup.mp4" type="video/mp4">
       <div style="color:#fff;">Your browser does not support the video tag.</div>
     </video>
@@ -36,6 +36,8 @@
   
   
 <script>
+var StartAnimation = document.getElementById("StartupAnimation"); 
+
 if (Name == "") {
   Name = "SteamyPickel";
   localStorage.setItem("Name", Name);
@@ -45,7 +47,7 @@ function Loaded() {
   document.getElementById("loader").style.display = "none";
   document.getElementById("BootScreen").style.display = "block";
   setTimeout(function() { hideBootScreen();showLoginScreen(); },5000);
-
+  StartAnimation.play();
 }
 </script>
 

@@ -30,7 +30,7 @@ body {
   color: white;
 }
 #Window {
-  background-color: 100;
+  background-color: #fff;
   overflow: hidden;
   position: fixed;
 }

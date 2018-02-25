@@ -29,6 +29,8 @@ if (WindowUAccountPassword != "" || WindowUAccountPassword != null) {
   } else {alert('Wrong Password. ' + PasswordEntered + ' is not right.');}
 } else { hideLoginScreen();showDesktop(); }
 }
+
+var Window;
 function OpenWindow(url) {
   document.getElementById("Window").style.display = "block";
   Window = document.getElementById("Window");

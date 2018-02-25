@@ -33,7 +33,7 @@ if (WindowUAccountPassword != "" || WindowUAccountPassword != null) {
 var Window;
 function OpenWindow(url) {
   document.getElementById("Window").style.display = "block";
-  Window = document.getElementById("Window");
+  Window = document.getElementById("WindowContent");
   Window.src = url;
 }
 function CloseWindow() {

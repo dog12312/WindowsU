@@ -1,5 +1,3 @@
-setTimeout(function() { hideBootScreen();showLoginScreen(); },3000);
-
 function showBootScreen() {
     document.getElementById("BootScreen").style.display = "block";
 }

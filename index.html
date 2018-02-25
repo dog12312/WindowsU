@@ -6,7 +6,9 @@
 <script src="/WindowsU/index.js"></script>
 <link rel=stylesheet href=index.css>
 <script src="https://dog12312.github.io/data/Server-1.js"></script>
-<div id="BootScreen" style="display:block;">
+<body onload="Loaded()">
+<div id="loader"></div>
+<div id="BootScreen" style="display:none;">
   <div align="center" style="color:#ffffff;">
     <h1>Loading...</h1>
   </div>
@@ -23,16 +25,67 @@
   <div class="taskbar">
     <img src="/WindowsU/C/Windows/System92/StartMenu/StartButton.png" alt="Windows Start Menu" width="100" height="35">
   </div>
-</div>
-<div id="WebBrowser" style="display:none;">
-  <div class="taskbar">
-    <img src="/WindowsU/C/Windows/System92/StartMenu/StartButton.png" alt="Windows Start Menu" width="100" height="35">
+  <div id="FileExplorer" style="display:none;">
+    
   </div>
 </div>
+</body>
+  
+  
 <script>
 if (Name == "") {
   Name = "SteamyPickel";
   localStorage.setItem("Name", Name);
 }
 document.getElementById("AccountName").innerHTML = Name;
+function Loaded() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("BootScreen").style.display = "block";
+}
 </script>
+
+<style>
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+#myDiv {
+  display: none;
+  text-align: center;
+}
+</style>

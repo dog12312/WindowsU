@@ -29,3 +29,8 @@ body {
   background-color: #000000;
   color: white;
 }
+#Window {
+  background-color: 100;
+  overflow: hidden;
+  position: fixed;
+}

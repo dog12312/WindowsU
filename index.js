@@ -29,3 +29,11 @@ if (WindowUAccountPassword != "" || WindowUAccountPassword != null) {
   } else {alert('Wrong Password. ' + PasswordEntered + ' is not right.');}
 } else { hideLoginScreen();showDesktop(); }
 }
+function OpenWindow(url) {
+  document.getElementById("Window").style.display = "block";
+  Window = document.getElementById("Window");
+  Window.src = url;
+}
+function CloseWindow() {
+  document.getElementById("Window").style.display = "none";
+}

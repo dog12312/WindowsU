@@ -19,7 +19,9 @@ function hideDesktop() {
 
 var WindowUAccountPassword = localStorage.getItem("WindowUAccountPassword");
 var PasswordEntered;
-
+if(WindowUAccountPassword == null) {
+  WindowUAccountPassword = "";
+}
 function CheckPassword() {
 PasswordEntered = document.getElementById("PasswordInput").value;
 if (WindowUAccountPassword != "" || WindowUAccountPassword != null) {

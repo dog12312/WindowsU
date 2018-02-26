@@ -37,5 +37,7 @@ function OpenWindow(url) {
   Window.src = url;
 }
 function CloseWindow() {
+  Window = document.getElementById("WindowContent");
+  Window.src = "";
   document.getElementById("Window").style.display = "none";
 }

@@ -1,0 +1,8 @@
+.navbutton {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    background-color: white;
+    padding: 10px 10px;
+    border-radius: 20px;
+}

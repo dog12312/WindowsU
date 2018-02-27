@@ -3,7 +3,7 @@
 <link rel="apple-touch-icon" href="/WindowsU/icon.png" type="image/x-icon">
 <link rel="stylesheet" href="index.css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<body style="margin:0;">
+<body style="margin:0;" onkeypress="keypressed(event)">
 <div id="inputpage" align="center" style="color: #ffffff;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);">
   <label class="w3-text-blue"><b>Search</b></label>
   <input class="w3-input w3-border" type="text" placeholder="Search Bing" id="SearchInput">
@@ -18,10 +18,11 @@
   <iframe id="WindowContent" src="" width="100%" height="100%"></iframe>
 </div>
 <script>
+function keypressed() {
 if (event.keyCode === 88) {
   setTimeout(function() { if (document.getElementById("navbutton").style.display == "block"){document.getElementById("navbutton").style.display = "none";}else {document.getElementById("navbutton").style.display = "block";} },1000);
 }
-
+}
 var Window = document.getElementById("WindowContent");
 var Search = document.getElementById("SearchInput").value;
 

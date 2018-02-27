@@ -6,7 +6,7 @@
 <div id="typeurl" align="center" style="color: #ffffff;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);">
   <label class="w3-text-blue"><b>URL</b></label>
   <input class="w3-input w3-border" type="text" placeholder="Type a URL" id="URLInput">
-</div id="Page">
+</div id="PageDiv">
   <iframe id="WindowContent" src="" width="100%" height="100%"></iframe>
 <div>
 
@@ -24,11 +24,11 @@ var URL = document.getElementById("URLInput").value;
 function OpenPage() {
   URL = document.getElementById("URLInput").value;
   document.getElementById("typeurl").style.display = "none";
-  document.getElementById("Page").style.display = "block";
+  document.getElementById("PageDiv").style.display = "block";
   Window.src = "https://dog12312.github.io";
 }
 function ClosePage() {
-  document.getElementById("Page").style.display = "none";
+  document.getElementById("PageDiv").style.display = "none";
   document.getElementById("typeurl").style.display = "block";
   Window.src = "";
 }

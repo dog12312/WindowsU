@@ -15,24 +15,44 @@
   <iframe id="WindowContent" src="" width="100%" height="100%"></iframe>
 </div>
 <script>
+var Window = document.getElementById("WindowContent");
+var Search = document.getElementById("SearchInput").value;
+
+var Searchinput = document.getElementById("URLInput");
+Searchinput.addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        OpenSearchPage();
+    }
+});
+function OpenSearchPage() {
+  Search = document.getElementById("URLInput").value;
+  document.getElementById("inputpage").style.display = "none";
+  document.getElementById("Page").style.display = "block";
+  Window.src = "https://www.bing.com/search?q="+Search;
+}
+function CloseSearchPage() {
+  document.getElementById("Page").style.display = "none";
+  document.getElementById("inputpage").style.display = "block";
+  Window.src = "";
+}
+var URL = document.getElementById("URLInput").value;
 var URLinput = document.getElementById("URLInput");
 URLinput.addEventListener("keyup", function(event) {
     event.preventDefault();
     if (event.keyCode === 13) {
-        OpenPage();
+        OpenURLPage();
     }
 });
-var Window = document.getElementById("WindowContent");
-var URL = document.getElementById("URLInput").value;
-function OpenPage() {
+function OpenURLPage() {
   URL = document.getElementById("URLInput").value;
-  document.getElementById("typeurl").style.display = "none";
+  document.getElementById("inputpage").style.display = "none";
   document.getElementById("Page").style.display = "block";
   Window.src = URL;
 }
-function ClosePage() {
+function CloseURLPage() {
   document.getElementById("Page").style.display = "none";
-  document.getElementById("typeurl").style.display = "block";
+  document.getElementById("inputpage").style.display = "block";
   Window.src = "";
 }
 </script>

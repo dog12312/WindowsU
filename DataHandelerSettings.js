@@ -1,6 +1,9 @@
 var WindowUAccountPassword = localStorage.getItem("WindowUAccountPassword");
 
 function loopwinu() {
+  if (WindowUAccountPassword == null) {
+    WindowUAccountPassword = "";
+  }
   if (Screen == "WindowsUSettings") {
     fill(500);
     textSize(34);

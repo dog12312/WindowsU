@@ -17,7 +17,7 @@ function hideDesktop() {
     document.getElementById("Desktop").style.display = "none";
 }
 
-var WindowUAccountPassword = localStorage.getItem("WindowUAccountPassword");
+var WindowUAccountPassword = "KKK";
 var PasswordEntered;
 if(WindowUAccountPassword == null) {
   WindowUAccountPassword = "";

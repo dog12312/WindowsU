@@ -19,9 +19,6 @@ function hideDesktop() {
 
 var WindowUAccountPassword = "KKK";
 var PasswordEntered;
-if(WindowUAccountPassword == null) {
-  WindowUAccountPassword = "";
-}
 function CheckPassword() {
 PasswordEntered = document.getElementById("PasswordInput").value;
 if (WindowUAccountPassword != "" || WindowUAccountPassword != null) {

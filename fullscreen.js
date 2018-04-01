@@ -1,28 +1,16 @@
-requestFullScreen();
-function requestFullScreen() {
-
-  var el = document.body;
-
-  // Supports most browsers and their versions.
-  var requestMethod = el.requestFullScreen || el.webkitRequestFullScreen 
-  || el.mozRequestFullScreen || el.msRequestFullScreen;
-
-  if (requestMethod) {
-
-    // Native full screen.
-    requestMethod.call(el);
-
-  } else if (typeof window.ActiveXObject !== "undefined") {
-
-    // Older IE.
-    var wscript = new ActiveXObject("WScript.Shell");
-
-    if (wscript !== null) {
-      wscript.SendKeys("{F11}");
+go_full_screen();
+function go_full_screen(){
+    var elem = document.documentElement;
+    if (elem.requestFullscreen) {
+      elem.requestFullscreen();
+    } else if (elem.msRequestFullscreen) {
+      elem.msRequestFullscreen();
+    } else if (elem.mozRequestFullScreen) {
+      elem.mozRequestFullScreen();
+    } else if (elem.webkitRequestFullscreen) {
+      elem.webkitRequestFullscreen();
     }
-  }
 }
-
 
 
 function toggleFullScreen() {

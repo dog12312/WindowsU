@@ -23,6 +23,10 @@ function CloseStartMenu() {
     document.getElementById("StartMenu").style.display = "none";
 }
 
+if (localStorage.WindowsU_Color == null) {
+  localStorage.WindowsU_Color = "#357EC7";
+}
+
 var WindowUAccountPassword = localStorage.getItem("WindowUAccountPassword");
 var PasswordEntered;
 if(WindowUAccountPassword == null) {

@@ -16,6 +16,12 @@ function showDesktop() {
 function hideDesktop() {
     document.getElementById("Desktop").style.display = "none";
 }
+function OpenStartMenu() {
+    document.getElementById("StartMenu").style.display = "block";
+}
+function CloseStartMenu() {
+    document.getElementById("StartMenu").style.display = "none";
+}
 
 var WindowUAccountPassword = localStorage.getItem("WindowUAccountPassword");
 var PasswordEntered;

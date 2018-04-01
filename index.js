@@ -23,6 +23,9 @@ function CloseStartMenu() {
     document.getElementById("StartMenu").style.display = "none";
 }
 
+var profile = document.getElementById("ProfilePic");
+profile.src = localStorage.ProfilePicture;
+
 var WindowUAccountPassword = localStorage.getItem("WindowUAccountPassword");
 var PasswordEntered;
 if(WindowUAccountPassword == null) {

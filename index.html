@@ -57,6 +57,9 @@
   
   
 <script>
+var profile = document.getElementById("ProfilePic");
+profile.src = localStorage.ProfilePicture;
+
 var StartAnimation = document.getElementById("StartupAnimation"); 
 StartupAnimation.onended = function() {
   hideBootScreen();

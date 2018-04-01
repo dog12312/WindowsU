@@ -18,9 +18,11 @@ function hideDesktop() {
 }
 function OpenStartMenu() {
     document.getElementById("StartMenu").style.display = "block";
+    hideDesktop();
 }
 function CloseStartMenu() {
     document.getElementById("StartMenu").style.display = "none";
+    showDesktop();
 }
 
 var WindowUAccountPassword = localStorage.getItem("WindowUAccountPassword");

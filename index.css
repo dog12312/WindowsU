@@ -21,14 +21,14 @@ body {
   background-size: cover;
 }
 #StartMenu {
-  position: fixed;
+  position: absolute;
   width:100%;
   height:100%;
   background-color: rgba(0,0,0,0.9);
   color: white;
 }
 .taskbar {
-  position: fixed;
+  position: absolute;
   left:0;
   bottom:0;
   width:100%;

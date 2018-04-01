@@ -1,0 +1,19 @@
+<title>Windows U</title>
+<link rel="shortcut icon" href="/WindowsU/C/Windows/System92/icons/Main.png" type="image/x-icon">
+<link rel="apple-touch-icon" href="/WindowsU/C/Windows/System92/icons/Main.png" type="image/x-icon">
+<div id="ShuttingDown" style="display:block;">
+  <div align="center" style="color: #ffffff;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);">
+    <img src="https://c.s-microsoft.com/en-us/CMSImages/minifindstore_spin.gif?version=45117834-d17e-3a16-5765-62399907b530" alt="" width="200" height="200">
+    <h1>Shutting Down</h1>
+  </div>
+</div>
+<script>
+document.getElementById("ShuttingDown").style.backgroundColor = localStorage.WindowsU-Color;
+setTimeout(function() { document.getElementById("ShuttingDown").style.display = "none"; },3000);
+setTimeout(function() { window.close(); },5000);
+</script>
+<style>
+body {
+  background-color:#000000;
+}
+</style>

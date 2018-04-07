@@ -55,8 +55,7 @@
       document.getElementById("SettingUp").style.display = "block";
       localStorage.Name = Name;
       localStorage.WindowUAccountPassword = Password;
-      localStorage.WindowsU_SetupDone = "1";
-      setTimeout(function() {window.location.href = '/WindowsU/';},2000);
+      setTimeout(function() {localStorage.WindowsU_SetupDone = "1";window.location.href = '/WindowsU/';},6000);
     }
   </script>
 </body>

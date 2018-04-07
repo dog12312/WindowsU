@@ -65,8 +65,12 @@ profile.src = localStorage.ProfilePicture;
 
 var StartAnimation = document.getElementById("StartupAnimation"); 
 StartupAnimation.onended = function() {
-  hideBootScreen();
-  showLoginScreen();
+  if (localStorage.WindowsU_SetupDone == 1) {
+    hideBootScreen();
+    showLoginScreen();
+  } else {
+    window.locatio.href = 'C/Windows/System92/Setup/';
+  }
 };
   
 if (Name == "") {

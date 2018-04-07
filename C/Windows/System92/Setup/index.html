@@ -29,9 +29,11 @@
     setTimeout(function() {document.getElementById("start").style.display = "none";document.getElementById("pickthemecolor").style.display = "block";},2000);
     function saveaccount() {
       Name = document.getElementById("Name").value;
+      Password = document.getElementById("Password").value;
     }
     function setup() {
-      
+      localStorage.Name = Name;
+      localStorage.WindowUAccountPassword = Password;
     }
   </script>
 </body>

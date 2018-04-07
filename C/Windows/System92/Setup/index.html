@@ -1,6 +1,7 @@
 <title>Windows U - Setup</title>
 <link rel="shortcut icon" href="/WindowsU/C/Windows/System92/icons/Main.png" type="image/x-icon">
 <link rel="apple-touch-icon" href="/WindowsU/C/Windows/System92/icons/Main.png" type="image/x-icon">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <body>
   <div id="start" style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);">
     <h1>Starting Setup</h1>
@@ -17,11 +18,29 @@
     <h1>Fill in the Following</h1>
     <input type="text" placeholder="Jarold" id="Name">
     <input type="text" placeholder="gf3rt536nhte6" id="Password">
-    <button onclick="saveaccount()">Next</button>
+    <button onclick="saveaccount();setup();">Next</button>
+  </div>
+  <div id="SettingUp" align="center" style="display:none;position: absolute;top: 40%;left: 50%;transform: translate(-50%, -50%);">
+    <h1>Please wait wile we set some things up</h1>
+    <button class="buttonload">
+    <i class="fa fa-circle-o-notch fa-spin"></i>Loading
+    </button>
   </div>
   <style>
     body {
       color:#ffffff;
+    }
+    .buttonload {
+      background-color: #4CAF50; /* Green background */
+      border: none; /* Remove borders */
+      color: white; /* White text */
+      padding: 12px 24px; /* Some padding */
+      font-size: 16px; /* Set a font-size */
+    }
+/* Add a right margin to each icon */
+    .fa {
+      margin-left: -12px;
+      margin-right: 8px;
     }
   </style>
   <script>
@@ -32,9 +51,12 @@
       Password = document.getElementById("Password").value;
     }
     function setup() {
+      document.getElementById("Account").style.display = "none";
+      document.getElementById("SettingUp").style.display = "block";
       localStorage.Name = Name;
       localStorage.WindowUAccountPassword = Password;
-      localStorage.WindowsU_SetupDone = "Yes";
+      localStorage.WindowsU_SetupDone = "1";
+      setTimeout(function() {window.location.href = '/WindowsU/';},2000);
     }
   </script>
 </body>

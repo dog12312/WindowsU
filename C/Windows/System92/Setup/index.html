@@ -44,8 +44,10 @@
     }
   </style>
   <script>
+    if (localStorage.WindowsU_SetupDone == "0" || localStorage.WindowsU_SetupDone == null) {
     document.body.style.backgroundColor = '#357EC7';
     setTimeout(function() {document.getElementById("start").style.display = "none";document.getElementById("pickthemecolor").style.display = "block";},2000);
+    }
     function saveaccount() {
       Name = document.getElementById("Name").value;
       Password = document.getElementById("Password").value;

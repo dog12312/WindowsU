@@ -4,7 +4,7 @@ body {
 }
 #Login{
   height: 100%;
-  background-image: url("C/Windows/System92/Wallpapers/Login.jpg");
+  background-image: url("Wallpapers/Login.jpg");
   background-size: 100% 100%;
   background-attachment: fixed;
   background-position: center;
@@ -14,7 +14,7 @@ body {
 #Desktop{
   display:none;
   height: 100%;
-  background-image: url("C/Windows/System92/Wallpapers/Login.jpg");
+  background-image: url("Wallpapers/Login.jpg");
   background-size: 100% 100%;
   background-attachment: fixed;
   background-position: center;

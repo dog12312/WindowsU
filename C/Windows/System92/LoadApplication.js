@@ -1,4 +1,9 @@
-function loadapplication() {
+function defaultapplicationsinstall() {
+  localStorage.WindowsU_ArcadeApplication = "Installed";
+  localStorage.WindowsU_p5js_editorApplication = "Installed";
+  localStorage.WindowsU_PokemonRedApplication = "Installed";
+}
+function loaddesktopapplication() {
   document.getElementById("SearchIcon").style.display = "block";
   if (localStorage.WindowsU_ArcadeApplication == "Installed") {
     document.getElementById("Arcade").style.display = "block";

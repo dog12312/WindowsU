@@ -38,7 +38,7 @@ if (WindowUAccountPassword != "" || WindowUAccountPassword != null) {
   if (PasswordEntered == WindowUAccountPassword) {
     hideLoginScreen();
     showDesktop();
-    loadapplication();
+    loaddesktopapplication();
   } else {alert('Wrong Password. ' + PasswordEntered + ' is not right.');}
 } else { hideLoginScreen();showDesktop(); }
 }

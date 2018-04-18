@@ -4,6 +4,7 @@
 <link rel="shortcut icon" href="/WindowsU/C/Windows/System92/icons/Main.png" type="image/x-icon">
 <link rel="apple-touch-icon" href="/WindowsU/C/Windows/System92/icons/Main.png" type="image/x-icon">
 <script src="/WindowsU/C/Windows/System92/System92.js"></script>
+<script src="/WindowsU/C/Windows/System92/LoadDesktopApplication.js"></script>
 <link rel=stylesheet href=C/Windows/System92/System92.css>
 <script src="/Arcade/Server/1.js"></script>
 <body onload="Loaded()">
@@ -91,18 +92,6 @@ function OpenSettings() {
       window.location.href = 'C/Windows/System92/Settings/exe';
   } else {
       CloseStartMenu();
-  }
-}
-function loadapplication() {
-  document.getElementById("SearchIcon").style.display = "block";
-  if (localStorage.WindowsU_ArcadeApplication == "Installed") {
-    document.getElementById("Arcade").style.display = "block";
-  }
-  if (localStorage.WindowsU_p5js_editorApplication == "Installed") {
-    document.getElementById("p5js_editor").style.display = "block";
-  }
-  if (localStorage.WindowsU_PokemonRedApplication == "Installed") {
-    document.getElementById("PokemonRed").style.display = "block";
   }
 }
 </script>

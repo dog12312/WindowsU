@@ -37,6 +37,7 @@
   document.getElementById("ProfilePic").style.backgroundColor = "#357EC7";
   function Loaded() {
     Color();
+    document.getElementById("ProfilePic").src = localStorage.ProfilePicture;
   }
   function Color() {
     document.getElementById("topwindowbar").style.backgroundColor = localStorage.WindowsU_Color;
@@ -49,7 +50,7 @@
     toDataURL(profileurl, function(dataUrl) {
   	  localStorage.ProfilePicture = dataUrl;
       //window.open("SeeProfilePic.html");
-      window.location.href = '/Arcade/DataHandeler/';
+      window.location.reload();
     })
   }
   

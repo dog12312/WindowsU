@@ -35,6 +35,7 @@
 <script>
   document.getElementById("topwindowbar").style.backgroundColor = "#357EC7";
   document.getElementById("ProfilePic").style.backgroundColor = "#357EC7";
+  document.getElementById("ChangeProfilePicButton").style.backgroundColor = "#357EC7";
   function Loaded() {
     Color();
     document.getElementById("ProfilePic").src = localStorage.ProfilePicture;
@@ -42,7 +43,7 @@
   function Color() {
     document.getElementById("topwindowbar").style.backgroundColor = localStorage.WindowsU_Color;
     document.getElementById("ProfilePic").style.backgroundColor = localStorage.WindowsU_Color;
-    document.getElementById("ChangeProfilePic").style.backgroundColor = localStorage.WindowsU_Color;
+    document.getElementById("ChangeProfilePicButton").style.backgroundColor = localStorage.WindowsU_Color;
   }
   
   function ChangeProfilePicture() {

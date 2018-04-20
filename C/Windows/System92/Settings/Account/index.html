@@ -13,12 +13,12 @@
   <div style="padding:20;display:inline-grid;">
     <img style="padding:5" id="ProfilePic" src="" alt="" width="150" height="150">
   </div>
-  <button class="ChangeProfilePicButton" onclick="ChangeProfilePicture();">Change Profile Picture</button>
+  <button id="ChangeProfilePicButton" onclick="ChangeProfilePicture();">Change Profile Picture</button>
 
 </body>
 
 <style>
-.ChangeProfilePicButton {
+#ChangeProfilePicButton {
     background-color: #357EC7;
     border: none;
     color: white;
@@ -42,7 +42,7 @@
   function Color() {
     document.getElementById("topwindowbar").style.backgroundColor = localStorage.WindowsU_Color;
     document.getElementById("ProfilePic").style.backgroundColor = localStorage.WindowsU_Color;
-    document.getElementByClassName("ChangeProfilePic").style.backgroundColor = localStorage.WindowsU_Color;
+    document.getElementById("ChangeProfilePic").style.backgroundColor = localStorage.WindowsU_Color;
   }
   
   function ChangeProfilePicture() {

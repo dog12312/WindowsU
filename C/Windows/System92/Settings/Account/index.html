@@ -1,0 +1,69 @@
+<title>Account Settings - Windows U</title>
+<link rel="shortcut icon" href="/WindowsU/C/Windows/System92/icons/Main.png" type="image/x-icon">
+<link rel="apple-touch-icon" href="/WindowsU/C/Windows/System92/icons/Main.png" type="image/x-icon">
+<script src="/WindowsU/C/Windows/System92/System92.js"></script>
+<link rel=stylesheet href=C/Windows/System92/System92.css>
+<style>
+  body {
+    margin:0;
+  }
+</style>
+<body onload="Loaded();">
+  <div style="top:0;width:100%;height:40;" id="topwindowbar"><img style="right:0;position:absolute;" onclick="alert('Your PC will need to restart.');window.close();window.location.href = '/WindowsU/';" src="http://icons.veryicon.com/ico/Application/Toolbar%20Icons%203/X.ico" alt="" width="40" height="40"></div>
+  <div style="padding:20;display:inline-grid;">
+    <img style="padding:5" id="ProfilePic" src="" alt="" width="150" height="150">
+  </div>
+  <button class="ChangeProfilePic" onclick="ChangeProfilePicture();">Change Profile Picture</button>
+
+</body>
+
+<style>
+.button {
+    background-color: #357EC7;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+</style>
+
+<script>
+  document.getElementById("topwindowbar").style.backgroundColor = "#357EC7";
+  document.getElementById("ProfilePic").style.backgroundColor = "#357EC7";
+  function Loaded() {
+    Color();
+  }
+  function Color() {
+    document.getElementById("topwindowbar").style.backgroundColor = localStorage.WindowsU_Color;
+    document.getElementById("ProfilePic").style.backgroundColor = localStorage.WindowsU_Color;
+    document.getElementById("ChangeProfilePic").style.backgroundColor = localStorage.WindowsU_Color;
+  }
+  
+  function ChangeProfilePicture() {
+    var profileurl = prompt('Type in the url of the link ');
+    toDataURL(profileurl, function(dataUrl) {
+  	  localStorage.ProfilePicture = dataUrl;
+      //window.open("SeeProfilePic.html");
+      window.location.href = '/Arcade/DataHandeler/';
+    })
+  }
+  
+function toDataURL(url, callback) {
+  var xhr = new XMLHttpRequest();
+  xhr.onload = function() {
+    var reader = new FileReader();
+    reader.onloadend = function() {
+      callback(reader.result);
+    }
+    reader.readAsDataURL(xhr.response);
+  };
+  xhr.open('GET', url);
+  xhr.responseType = 'blob';
+  xhr.send();
+}
+</script>

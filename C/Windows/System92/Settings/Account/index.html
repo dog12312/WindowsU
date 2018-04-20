@@ -57,7 +57,8 @@
   
 function ChangePassword() {
 PasswordEntered = document.getElementById("PasswordInput").value;
-localStorage.WindowsU_Password = PasswordEntered;
+localStorage.WindowsUAccountPassword = PasswordEntered;
+alert("Changed");
 }
   
 function toDataURL(url, callback) {

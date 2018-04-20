@@ -14,7 +14,7 @@
     <button id="ChangeProfilePicButton Button" onclick="ChangeProfilePicture();">Change Profile Picture</button>
   </div>
   <input type="text" placeholder="NewPassword" id="PasswordInput">
-    <button id="Button" onclick="ChangePassword()">Login</button>
+  <button id="Button" onclick="ChangePassword()">Login</button>
 </body>
 
 <style>
@@ -54,6 +54,11 @@
       window.location.reload();
     })
   }
+  
+function ChangePassword() {
+PasswordEntered = document.getElementById("PasswordInput").value;
+localStorage.WindowsU_Password = PasswordEntered;
+}
   
 function toDataURL(url, callback) {
   var xhr = new XMLHttpRequest();

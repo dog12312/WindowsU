@@ -14,7 +14,11 @@
     <button id="ChangeProfilePicButton" onclick="ChangeProfilePicture();">Change Profile Picture</button>
   </div>
   <div style="padding:20;display:inline-grid;">
-    <input type="text" placeholder="NewPassword" id="PasswordInput">
+    <input type="text" placeholder="New Name" id="NameInput">
+    <button id="ChangeNameButton" onclick="ChangeAccountName()">Change Account Name</button>
+  </div>
+  <div style="padding:20;display:inline-grid;">
+    <input type="text" placeholder="New Password" id="PasswordInput">
     <button id="ChangePasswordButton" onclick="ChangePassword()">Change Password</button>
   </div>
 </body>
@@ -24,10 +28,22 @@
     background-color: #357EC7;
     border: none;
     color: white;
-    padding: 15px 0;
+    padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-grid;
+    font-size: 16px;
+    //margin: 4px 2px;
+    cursor: pointer;
+}
+#ChangeNameButton {
+    background-color: #357EC7;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    //display: inline-block;
     font-size: 16px;
     //margin: 4px 2px;
     cursor: pointer;
@@ -36,7 +52,7 @@
     background-color: #357EC7;
     border: none;
     color: white;
-    padding: 15px 0;
+    padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     //display: inline-block;
@@ -50,6 +66,7 @@
   document.getElementById("topwindowbar").style.backgroundColor = "#357EC7";
   document.getElementById("ProfilePic").style.backgroundColor = "#357EC7";
   document.getElementById("ChangeProfilePicButton").style.backgroundColor = "#357EC7";
+  document.getElementById("ChangeNameButton").style.backgroundColor = "#357EC7";
   document.getElementById("ChangePasswordButton").style.backgroundColor = "#357EC7";
   function Loaded() {
     Color();
@@ -59,6 +76,7 @@
     document.getElementById("topwindowbar").style.backgroundColor = localStorage.WindowsU_Color;
     document.getElementById("ProfilePic").style.backgroundColor = localStorage.WindowsU_Color;
     document.getElementById("ChangeProfilePicButton").style.backgroundColor = localStorage.WindowsU_Color;
+    document.getElementById("ChangeNameButton").style.backgroundColor = localStorage.WindowsU_Color;
     document.getElementById("ChangePasswordButton").style.backgroundColor = localStorage.WindowsU_Color;
   }
   
@@ -71,6 +89,12 @@
     })
   }
   
+function ChangeAccountName() {
+NameEntered = document.getElementById("NameInput").value;
+localStorage.Name = NameEntered;
+alert("Changed");
+}
+
 function ChangePassword() {
 PasswordEntered = document.getElementById("PasswordInput").value;
 localStorage.WindowsUAccountPassword = PasswordEntered;

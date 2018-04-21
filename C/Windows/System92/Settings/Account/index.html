@@ -11,14 +11,26 @@
   <div style="top:0;width:100%;height:40;" id="topwindowbar"><img style="right:0;position:absolute;" onclick="alert('Your PC will need to restart.');window.close();window.location.href = '/WindowsU/';" src="http://icons.veryicon.com/ico/Application/Toolbar%20Icons%203/X.ico" alt="" width="40" height="40"></div>
   <div style="padding:20;display:inline-grid;">
     <img style="padding:5" id="ProfilePic" src="" alt="" width="150" height="150">
-    <button id="ChangeProfilePicButton Button" onclick="ChangeProfilePicture();">Change Profile Picture</button>
+    <button id="ChangeProfilePicButton" onclick="ChangeProfilePicture();">Change Profile Picture</button>
   </div>
   <input type="text" placeholder="NewPassword" id="PasswordInput">
-  <button id="Button" onclick="ChangePassword()">Change Password</button>
+  <button id="ChangePasswordButton" onclick="ChangePassword()">Change Password</button>
 </body>
 
 <style>
-#Button {
+#ChangeProfilePicButton {
+    background-color: #357EC7;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+#ChangePasswordButton {
     background-color: #357EC7;
     border: none;
     color: white;
@@ -35,7 +47,8 @@
 <script>
   document.getElementById("topwindowbar").style.backgroundColor = "#357EC7";
   document.getElementById("ProfilePic").style.backgroundColor = "#357EC7";
-  document.getElementById("Button").style.backgroundColor = "#357EC7";
+  document.getElementById("ChangeProfilePicButton").style.backgroundColor = "#357EC7";
+  document.getElementById("ChangePasswordButton").style.backgroundColor = "#357EC7";
   function Loaded() {
     Color();
     document.getElementById("ProfilePic").src = localStorage.ProfilePicture;
@@ -43,7 +56,8 @@
   function Color() {
     document.getElementById("topwindowbar").style.backgroundColor = localStorage.WindowsU_Color;
     document.getElementById("ProfilePic").style.backgroundColor = localStorage.WindowsU_Color;
-    document.getElementById("Button").style.backgroundColor = localStorage.WindowsU_Color;
+    document.getElementById("ChangeProfilePicButton").style.backgroundColor = localStorage.WindowsU_Color;
+    document.getElementById("ChangePasswordButton").style.backgroundColor = localStorage.WindowsU_Color;
   }
   
   function ChangeProfilePicture() {

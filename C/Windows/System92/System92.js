@@ -27,7 +27,7 @@ if (localStorage.WindowsU_Color == null) {
   localStorage.WindowsU_Color = "#357EC7";
 }
 
-var WindowUAccountPassword = localStorage.getItem("WindowUAccountPassword");
+var WindowUAccountPassword = localStorage.getItem("WindowsUAccountPassword");
 var PasswordEntered;
 if(WindowUAccountPassword == null) {
   WindowUAccountPassword = "";

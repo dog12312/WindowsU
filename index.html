@@ -84,6 +84,10 @@ document.getElementById("AccountName").innerHTML = Name;
 function Loaded() {
   document.getElementById("loader").style.display = "none";
   document.getElementById("BootScreen").style.display = "block";
+  document.body.style.backgroundColor = "#357EC7";
+  if (localStorage.WindowsU_DesktopBackgroundImage != null || localStorage.WindowsU_DesktopBackgroundImage != "NaN") {
+    document.getElementById("Desktop").style.backgroundImage = "url("+localStorage.WindowsU_DesktopBackgroundImage+")";
+  }
   StartAnimation.play();
 }
 function OpenSettings() {

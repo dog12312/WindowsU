@@ -71,6 +71,10 @@ StartupAnimation.onended = function() {
   if (localStorage.WindowsU_SetupDone == "1" && localStorage.WindowsU_Version == "1.0") {
     hideBootScreen();
     showLoginScreen();
+    document.body.style.backgroundColor = localStorage.WindowsU_Color;
+    if (localStorage.WindowsU_DesktopBackgroundImage != null || localStorage.WindowsU_DesktopBackgroundImage != "NaN") {
+      document.getElementById("Desktop").style.backgroundImage = "url("+localStorage.WindowsU_DesktopBackgroundImage+")";
+    } //else { localStorage.WindowsU_DesktopBackgroundImage = "https://dogindustrialstudios.github.io/WindowsU/C/Windows/System92/images/Banner.png"; }
   } else {
     window.location.href = 'C/Windows/System92/Setup/';
   }
@@ -84,10 +88,6 @@ document.getElementById("AccountName").innerHTML = Name;
 function Loaded() {
   document.getElementById("loader").style.display = "none";
   document.getElementById("BootScreen").style.display = "block";
-  document.body.style.backgroundColor = "#357EC7";
-  if (localStorage.WindowsU_DesktopBackgroundImage != null || localStorage.WindowsU_DesktopBackgroundImage != "NaN") {
-    document.getElementById("Desktop").style.backgroundImage = "url("+localStorage.WindowsU_DesktopBackgroundImage+")";
-  }
   StartAnimation.play();
 }
 function OpenSettings() {

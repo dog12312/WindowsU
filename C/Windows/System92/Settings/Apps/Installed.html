@@ -1,1 +1,29 @@
-
+<body onload="UpdateLoaded();">
+  <div id="Arcade" style="display:none;max-height:50;">
+    <img src="/Arcade/logo.ico" ondblclick="OpenWindow('https://dog12312.github.io');" alt="Arcade" width="50" height="50">
+    <h1>Arcade</h1>
+    <h3 onclick="localStorage.WindowsU_ArcadeApplication='uninstalled';window.location.reload();">Uninstall</h3>
+  </div>
+  <p> </p>
+  <div id="p5js_editor" style="display:none;">
+    <img src="https://raw.githubusercontent.com/processing/p5.js-website-OLD/master/favicon.ico" ondblclick="OpenWindow('https://alpha.editor.p5js.org/');" alt="Alpha Editor" width="50" height="50">
+  </div>
+  <p> </p>
+  <div id="PokemonRed" style="display:none;">
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a6/Pok%C3%A9mon_box_art_-_Red_Version.png/220px-Pok%C3%A9mon_box_art_-_Red_Version.png" ondblclick="OpenWindow('/Arcade/Game/GameBoy/Pokemon/Red');" alt="Game" width="50" height="50">
+  </div>
+  <p> </p>
+</body>
+<script>
+  function UpdateLoaded() {
+    if (localStorage.WindowsU_ArcadeApplication == "Installed") {
+      document.getElementById("Arcade").style.display = "block";
+    }
+    if (localStorage.WindowsU_p5js_editorApplication == "Installed") {
+      document.getElementById("p5js_editor").style.display = "block";
+    }
+    if (localStorage.WindowsU_PokemonRedApplication == "Installed") {
+      document.getElementById("PokemonRed").style.display = "block";
+    }
+  }
+</script>

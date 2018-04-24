@@ -31,11 +31,9 @@
   </div>
 </body>
 <script>
-  UpdateDesktop();
+  document.getElementById("YourDesktopImage").src = localStorage.WindowsU_DesktopBackgroundImage;
   function UpdateDesktop(P) {
-    if (P != null || P != "unidentified") {
-      localStorage.WindowsU_DesktopBackgroundImage = P;
-    }
+    localStorage.WindowsU_DesktopBackgroundImage = P;
     document.getElementById("YourDesktopImage").src = localStorage.WindowsU_DesktopBackgroundImage;
   }
   document.getElementById("topwindowbar").style.backgroundColor = "#357EC7";

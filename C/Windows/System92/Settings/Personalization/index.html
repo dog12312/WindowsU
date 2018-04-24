@@ -14,6 +14,12 @@
     <img style="left:0;position:absolute;" onclick="window.history.back();" src="/WindowsU/C/Windows/System92/icons/Back.png" alt="" width="40" height="40">
   </div>
   <div style="margin:50px;">
+    <h1>Desktop</h1>
+    <div align="" style="background-color:#fff;padding:0;">
+      <img id="YourDesktopImage" src="" alt="DesktopImage" width="960" height="540">
+    </div>
+  </div>
+  <div style="margin:50px;">
     <h1>Colors</h1>
     <div align="" style="background-color:#fff;padding:0;">
       <div onclick="localStorage.WindowsU_Color = '#357EC7';Color();" style="width:50;height:50;background-color:#357EC7;display:inline-block;"></div>
@@ -23,6 +29,10 @@
   </div>
 </body>
 <script>
+  UpdateDesktop();
+  function UpdateDesktop() {
+    document.getElementById("topwindowbar").src = localStorage.WindowsU_DesktopBackgroundImage;
+  }
   document.getElementById("topwindowbar").style.backgroundColor = "#357EC7";
   document.getElementById("sidetext").style.color = "#357EC7";
   function Color() {

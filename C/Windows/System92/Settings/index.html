@@ -17,6 +17,9 @@
       <img onclick="window.location.href='Account';" style="padding:5" id="home_accounticon" src="http://icons.iconarchive.com/icons/fasticon/my-fav/512/user-icon.png" alt="" width="150" height="150">
     </div>
     <div style="padding:20;display:inline-grid;">
+      <img onclick="window.location.href='Apps';" style="padding:5" id="home_yourappsicon" src="/WindowsU/C/Windows/System92/icons/YourApplications.png" alt="" width="150" height="150">
+    </div>
+    <div style="padding:20;display:inline-grid;">
       <img onclick="window.location.href='Personalization';" style="padding:5" id="home_personalizationicon" src="/WindowsU/C/Windows/System92/icons/Personalization.ico" alt="" width="150" height="150">
     </div>
   <div>
@@ -25,11 +28,13 @@
   document.getElementById("topwindowbar").style.backgroundColor = "#357EC7";
   document.getElementById("home_systemicon").style.backgroundColor = "#357EC7";
   document.getElementById("home_accounticon").style.backgroundColor = "#357EC7";
+  document.getElementById("home_yourappsicon").style.backgroundColor = "#357EC7";
   document.getElementById("home_personalizationicon").style.backgroundColor = "#357EC7";
   function Color() {
     document.getElementById("topwindowbar").style.backgroundColor = localStorage.WindowsU_Color;
     document.getElementById("home_systemicon").style.backgroundColor = localStorage.WindowsU_Color;
     document.getElementById("home_accounticon").style.backgroundColor = localStorage.WindowsU_Color;
+    document.getElementById("home_yourappsicon").style.backgroundColor = localStorage.WindowsU_Color;
     document.getElementById("home_personalizationicon").style.backgroundColor = localStorage.WindowsU_Color;
   }
 </script>

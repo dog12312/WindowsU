@@ -41,7 +41,7 @@ function Clock() {
     var s = today.getSeconds();
     m = checkTime(m);
     s = checkTime(s);
-    document.getElementById('ClockText').innerHTML =
+    document.getElementById('TaskbarClock').innerHTML =
     h + ":" + m + ":" + s;
 }
 function checkTime(i) {

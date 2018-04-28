@@ -41,8 +41,7 @@ function Clock() {
     var s = today.getSeconds();
     m = checkTime(m);
     s = checkTime(s);
-    document.getElementById('TaskbarClock').innerHTML =
-    h + ":" + m + ":" + s;
+    document.getElementById('TaskbarClock').innerHTML = h + ":" + m + ":" + s;
 }
 function checkTime(i) {
     if (i < 10) {i = "0" + i};

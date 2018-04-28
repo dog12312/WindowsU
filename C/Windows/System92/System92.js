@@ -1,6 +1,6 @@
 
 function SystemRun() {
-  //Clock();
+  Clock();
   loaddesktopapplication();
 }
 setInterval(SystemRun, 0);

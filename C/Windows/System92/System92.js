@@ -1,9 +1,11 @@
+function Start() {
+  setInterval(SystemRun, 0);
+}
 
 function SystemRun() {
   Clock();
   loaddesktopapplication();
 }
-setInterval(SystemRun, 0);
 
 function showBootScreen() {
     document.getElementById("BootScreen").style.display = "block";

@@ -61,6 +61,10 @@
   
   
 <script>
+$(document).ready(function(){
+    $("#DesktopApplications").load("/WindowsU/Applications.html");
+});
+
 var profile = document.getElementById("ProfilePic");
 profile.src = localStorage.ProfilePicture;
 

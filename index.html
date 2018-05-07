@@ -89,8 +89,8 @@ document.getElementById("AccountName").innerHTML = Name;
 function Loaded() {
   document.getElementById("loader").style.display = "none";
   document.getElementById("BootScreen").style.display = "block";
+  Start();
   StartAnimation.play();
-  Started();
 }
 function OpenSettings() {
   var opensettings = confirm("When you exit WindowsU will restart. Open Settings?");

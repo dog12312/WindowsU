@@ -6,6 +6,11 @@
 <script src="/WindowsU/C/Windows/System92/LoadApplications.js"></script>
 <link rel=stylesheet href=C/Windows/System92/System92.css>
 <script src="/Arcade/Server/1.js"></script>
+<script>
+  $(document).ready(function(){
+    $("#DesktopApplications").load("https://dogindustrialstudios.github.io/WindowsU/Applications.html");
+  });
+</script>
 <body onload="Loaded()">
 <div id="loader"></div>
 <div id="BootScreen" style="display:none;">
@@ -34,9 +39,7 @@
       <iframe id="WindowContent" src="https://dogindustrialstudios.github.io/WindowsU/C/" width="100%" height="96%"></iframe>
     </div>
   </div>
-  <div id="DesktopApplications" style="padding:10;">
-    
-  </div>
+  <div id="DesktopApplications" style="padding:10;"></div>
   <div class="taskbar">
     <img style="display:inline;" src="/WindowsU/C/Windows/System92/StartMenu/StartButton.png" onclick="OpenStartMenu();" alt="Windows Start Menu" width="100" height="35">
     <div style="display:inline;margin-left: 100px;">
@@ -59,12 +62,8 @@
 </div>
 </body>
   
-  
+ 
 <script>
-$(document).ready(function(){
-    $("#DesktopApplications").load("/WindowsU/Applications.html");
-});
-
 var profile = document.getElementById("ProfilePic");
 profile.src = localStorage.ProfilePicture;
 

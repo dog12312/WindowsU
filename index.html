@@ -90,6 +90,8 @@ function Loaded() {
   document.getElementById("loader").style.display = "none";
   document.getElementById("BootScreen").style.display = "block";
   Start();
+  var BootVid = document.getElementById("StartupAnimation"); 
+  BootVid.play(); 
   setTimeout(EndBoot,8000);
 }
 function OpenSettings() {

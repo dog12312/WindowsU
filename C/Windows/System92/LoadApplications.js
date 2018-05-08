@@ -17,4 +17,7 @@ function loaddesktopapplication() {
   if (localStorage.WindowsU_Dog12312RainbowColorFunApplication == "Installed") {
     document.getElementById("Dog12312RainbowColorFun").style.display = "block";
   } else { document.getElementById("Dog12312RainbowColorFun").style.display = "none"; }
+  if (localStorage.CalebTowerDefenseApplication == "Installed") {
+    document.getElementById("CalebTowerDefense").style.display = "block";
+  } else { document.getElementById("CalebTowerDefense").style.display = "none"; }
 }

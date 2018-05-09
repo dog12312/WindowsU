@@ -1,0 +1,10 @@
+<title>bios</title>
+<body onload="StartBios">
+  
+</body>
+
+<style>
+body {
+  background:#0000aa;
+}
+</style>

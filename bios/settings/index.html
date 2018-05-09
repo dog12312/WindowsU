@@ -28,7 +28,19 @@ body {
     width:100%;
     height:40%;
     max-height:40%;
-  }
+}
+.button {
+    width:100%;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    //margin: 0px 2px;
+    cursor: pointer;
+}
 </style>
 <body onload="Loaded();">
   <div id="topbanner">
@@ -36,14 +48,38 @@ body {
   <div>
     <a style="fontSize:50px;">Fast Boot </a>
     <label class="switch">
-      <input type="checkbox">
+      <input id="FastBoot" type="checkbox" onclick="FastBoot();">
       <span class="slider"></span>
     </label>
   </div>
+  <button onclick="Savebios();" class="button" style="position:absolute;bottom:0;right;0;background-color: #4CAF50;width:200%;">Save Bios Settings</button>
 </body>
 <script>
 function Loaded() {
   document.getElementById("biosbootscreen").style.display = "none";
+  LoadSettings();
+}
+function LoadSettings() {
+  if (localStorage.biossettings == "NaN" || localStorage.biossettings == null) {
+    localStorage.biosettings = "0";
+  }
+  var settings = localStorage.biossettings;
+  if (settings.substring(0, 1) == 1) {
+    document.getElementById("FastBoot").checked = true;
+  }
+}
+function ClickSettings() {
+  var Fastbootslider = document.getElementById("FastBoot");
+  if (Fastbootslider.checked == true){
+  } else {
+  }
+}
+function Savebios() {
+  var settings = "";
+  if (document.getElementById("FastBoot").checked == true) {
+    settings = settings + "1";
+  } else {settings = settings + "0";}
+  localStorage.biossettings = settings;
 }
 </script>
 

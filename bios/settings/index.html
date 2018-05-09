@@ -61,7 +61,7 @@ function Loaded() {
 }
 function LoadSettings() {
   if (localStorage.biossettings == "NaN" || localStorage.biossettings == null) {
-    localStorage.biosettings = "0";
+    localStorage.biossettings = "0";
   }
   var settings = localStorage.biossettings;
   if (settings.substring(0, 1) == 1) {

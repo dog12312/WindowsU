@@ -20,9 +20,19 @@ body {
     z-index: 2;
     cursor: none;
 }
+#topbanner {
+    background-image: url("/WindowsU/C/Windows/System92/images/Banner.png");
+    background-size: 100% 40%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    width:100%;
+    height:40%;
+    max-height:50%;
+  }
 </style>
-<body onload="Loaded">
-  
+<body onload="Loaded();">
+  <div id="topbanner">
+  </div>
 </body>
 <script>
 function Loaded() {

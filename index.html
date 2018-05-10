@@ -67,7 +67,7 @@
 <script>
 var settings = localStorage.WindowsU_biossettings;
 if (localStorage.WindowsU_biossettings == "NaN" || localStorage.WindowsU_biossettings == null) {
-    localStorage.WindowsU_biossettings = "0";
+    localStorage.WindowsU_biossettings = "00";
 }
   
 var profile = document.getElementById("ProfilePic");
@@ -98,7 +98,7 @@ function Loaded() {
   document.getElementById("LaunchBiosButton").style.display = "none";
   document.getElementById("BootScreen").style.display = "block";
   Start();
-  if (settings.substring(0, 1) == 0) {
+  if (settings.substring(0, 1) != 1) {
     document.getElementById("LaunchBiosButton").style.display = "none";
     setTimeout(EndBoot,8000);
   } else { document.getElementById("LaunchBiosButton").style.display = "none";EndBoot(); }

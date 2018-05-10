@@ -61,10 +61,10 @@ function Loaded() {
   LoadSettings();
 }
 function LoadSettings() {
-  if (localStorage.biossettings == "NaN" || localStorage.biossettings == null) {
-    localStorage.biossettings = "0";
+  if (localStorage.WindowsU_biossettings == "NaN" || localStorage.WindowsU_biossettings == null) {
+    localStorage.WindowsU_biossettings = "0";
   }
-  var settings = localStorage.biossettings;
+  var settings = localStorage.WindowsU_biossettings;
   if (settings.substring(0, 1) == 1) {
     document.getElementById("FastBoot").checked = true;
   }
@@ -80,7 +80,7 @@ function Savebios() {
   if (document.getElementById("FastBoot").checked == true) {
     settings = settings + "1";
   } else {settings = settings + "0";}
-  localStorage.biossettings = settings;
+  localStorage.WindowsU_biossettings = settings;
 }
 </script>
 

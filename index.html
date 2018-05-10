@@ -89,8 +89,8 @@ if (Name == "") {
 }
 document.getElementById("AccountName").innerHTML = Name;
 function Loaded() {
-  setTimeout(function() {
   document.getElementById("loader").style.display = "none";
+  setTimeout(function() {
   document.getElementById("BootScreen").style.display = "block";
   Start();
   if (settings.substring(0, 1) == 0) {

@@ -56,7 +56,7 @@ body {
 </body>
 <script>
 function Loaded() {
-  document.getElementById("biosbootscreen").style.display = "none";
+  setTimout(function(){ document.getElementById("biosbootscreen").style.display = "none"; },2000);
   LoadSettings();
 }
 function LoadSettings() {

@@ -95,7 +95,7 @@ function Loaded() {
   document.getElementById("loader").style.display = "none";
   document.getElementById("BootScreen").style.display = "block";
   Start();
-  if (settings.substring(0, 1) == 1) {
+  if (settings.substring(0, 1) == 0) {
     var BootVid = document.getElementById("StartupAnimation"); 
     BootVid.play(); 
     setTimeout(EndBoot,8000);

@@ -48,7 +48,15 @@ body {
   <div id="FastBootOption" style="background-color:white;height:34;">
     <a style=" margin:30 0;top:0;font-size:30px;">Fast Boot</a>
     <label class="switch" style="float:right;">
-      <input id="FastBoot" type="checkbox" onclick="FastBoot();">
+      <input id="FastBoot" type="checkbox" onclick="">
+      <span class="slider"></span>
+    </label>
+  </div>
+  <p> </p>
+  <div id="OverCLockOption" style="background-color:white;height:34;">
+    <a style=" margin:30 0;top:0;font-size:30px;">OverClock</a>
+    <label class="switch" style="float:right;">
+      <input id="OverClock" type="checkbox" onclick="">
       <span class="slider"></span>
     </label>
   </div>
@@ -68,16 +76,16 @@ function LoadSettings() {
   if (settings.substring(0, 1) == 1) {
     document.getElementById("FastBoot").checked = true;
   }
-}
-function ClickSettings() {
-  var Fastbootslider = document.getElementById("FastBoot");
-  if (Fastbootslider.checked == true){
-  } else {
+  if (settings.substring(1, 2) == 1) {
+    document.getElementById("OverClock").checked = true;
   }
 }
 function Savebios() {
   var settings = "";
   if (document.getElementById("FastBoot").checked == true) {
+    settings = settings + "1";
+  } else {settings = settings + "0";}
+  if (document.getElementById("OverClocked").checked == true) {
     settings = settings + "1";
   } else {settings = settings + "0";}
   localStorage.WindowsU_biossettings = settings;

@@ -65,10 +65,10 @@
   
  
 <script>
-var settings = localStorage.WindowsU_biossettings;
 if (localStorage.WindowsU_biossettings == "NaN" || localStorage.WindowsU_biossettings == null) {
     localStorage.WindowsU_biossettings = "00";
 }
+var settings = localStorage.WindowsU_biossettings;
   
 var profile = document.getElementById("ProfilePic");
 profile.src = localStorage.ProfilePicture;

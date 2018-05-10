@@ -99,7 +99,7 @@ function Loaded() {
   if (settings.substring(0, 1) == 0) {
     document.getElementById("LaunchBiosButton").style.display = "none";
     setTimeout(EndBoot,8000);
-  } else { EndBoot(); }
+  } else { document.getElementById("LaunchBiosButton").style.display = "none";EndBoot(); }
   },4000);
 }
 function OpenSettings() {

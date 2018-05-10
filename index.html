@@ -89,12 +89,14 @@ if (Name == "") {
 }
 document.getElementById("AccountName").innerHTML = Name;
 function Loaded() {
+  setTimeout(function() {
   document.getElementById("loader").style.display = "none";
   document.getElementById("BootScreen").style.display = "block";
   Start();
   if (settings.substring(0, 1) == 0) {
     setTimeout(EndBoot,8000);
   } else { EndBoot(); }
+  },2000);
 }
 function OpenSettings() {
   var opensettings = confirm("When you exit WindowsU will restart. Open Settings?");

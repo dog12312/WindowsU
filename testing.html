@@ -3,6 +3,7 @@ var protocal = window.location.protocol;
 var hostname = window.location.hostname;
 var path = window.location.pathname;
 var CompleteUrl = protocal+hostname+path;
+console.log(CompleteUrl);
 var url_string = CompleteUrl; //window.location.href
 var url = new URL(url_string);
 var c = url.searchParams.get("c");

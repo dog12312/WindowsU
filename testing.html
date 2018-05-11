@@ -16,10 +16,10 @@ function parse_query_string(query) {
       query_string[pair[0]].push(decodeURIComponent(pair[1]));
     }
   }
-  return query_string;
+  return query;
 }
 
 var query = window.location.search.substring(1);
 var qs = parse_query_string(query);
-console.log(parsed_qs.c);
+console.log(qs.c);
 </script>

@@ -1,6 +1,5 @@
 <script>
-var myParam = location.search.split('myParam=')[1] ? location.search.split('myParam=')[1] : 'myDefaultValue';
-var url_string = myParam; //window.location.href
+var url_string = "http://www.example.com/t.html?a=1&b=3&c=m2-m3-m4-m5"; //window.location.href
 var url = new URL(url_string);
 var c = url.searchParams.get("c");
 console.log(c);

@@ -24,6 +24,9 @@ function parse_query_string(query) {
 var query = window.location.search.substring(1);
 var qs = parse_query_string(query);
 //alert(qs.host);
+if (qs.host == null || qs.host == "undefined") {
+  window.location.href = 'Missing Link';
+}
 $(document).ready(function(){
   $("#Content").load(qs.host);
 });

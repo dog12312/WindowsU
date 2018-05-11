@@ -1,6 +1,7 @@
 <script>
-var url_string = "https://dogindustrialstudios.github.io/WindowsU/testing.html?a=1&b=3&c=m2-m3-m4-m5"; //window.location.href
-var url = new URL(url_string);
-var c = url.searchParams.get("c");
+//var url_string = "https://dogindustrialstudios.github.io/WindowsU/testing.html?a=1&b=3&c=m2-m3-m4-m5"; //window.location.href
+//var url = new URL(url_string);
+//var c = url.searchParams.get("c");
+var c = '<? echo $_GET['c'] ?>';
 console.log(c);
 </script>

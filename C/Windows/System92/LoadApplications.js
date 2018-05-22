@@ -20,4 +20,7 @@ function loaddesktopapplication() {
   if (localStorage.WindowsU_CalebTowerDefenseApplication == "Installed") {
     document.getElementById("CalebTowerDefense").style.display = "block";
   } else { document.getElementById("CalebTowerDefense").style.display = "none"; }
+  if (localStorage.WindowsU_CalebDodgeApplication == "Installed") {
+    document.getElementById("CalebDodge").style.display = "block";
+  } else { document.getElementById("CalebDodge").style.display = "none"; }
 }

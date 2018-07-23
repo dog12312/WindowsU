@@ -78,9 +78,8 @@ function EndBoot() {
     hideBootScreen();
     showLoginScreen();
     document.body.style.backgroundColor = localStorage.WindowsU_Color;
-    if (localStorage.WindowsU_DesktopBackgroundImage != null || localStorage.WindowsU_DesktopBackgroundImage != "NaN") {
-      document.getElementById("Desktop").style.backgroundImage = "url("+localStorage.WindowsU_DesktopBackgroundImage+")";
-    } //else { localStorage.WindowsU_DesktopBackgroundImage = "https://dogindustrialstudios.github.io/WindowsU/C/Windows/System92/images/Banner.png"; }
+    setInterval(function() {if (localStorage.WindowsU_DesktopBackgroundImage != null || localStorage.WindowsU_DesktopBackgroundImage != "NaN") {document.getElementById("Desktop").style.backgroundImage = "url("+localStorage.WindowsU_DesktopBackgroundImage+")";}}, 0);
+ //else { localStorage.WindowsU_DesktopBackgroundImage = "https://dogindustrialstudios.github.io/WindowsU/C/Windows/System92/images/Banner.png"; }
   } else {
     window.location.href = 'C/Windows/System92/Setup/';
   }

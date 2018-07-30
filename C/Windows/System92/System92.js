@@ -77,3 +77,21 @@ function CloseWindow() {
   Window.src = "";
   document.getElementById("Window").style.display = "none";
 }
+
+
+var ErrorSound = new Audio('https://dogindustrialstudios.github.io/Arcade/Server/ErrorSound.mp3');
+
+window.addEventListener("error", handleError, true);
+
+function handleError(evt) {
+  ErrorSound.play();
+  var ErrorWindow = window.open("", "ErrorWindow", "width=600,height=200");
+  ErrorWindow.document.write("<title>Error</tile>");
+  if (localStorage.debug == "1") {
+    if (evt.message) { // Chrome sometimes provides this
+      ErrorWindow.document.write("<p>"+"error: "+evt.message +" at linenumber: "+evt.lineno+" of file: "+evt.filename+"</p>");
+    } else {
+      ErrorWindow.document.write("<p>"+"error: "+evt.type+" from element: "+(evt.srcElement || evt.target)+"</p>");
+    }
+  }
+}

@@ -11,6 +11,9 @@ function loaddesktopapplication() {
   if (localStorage.WindowsU_p5js_editorApplication == "Installed") {
     document.getElementById("p5js_editor").style.display = "block";
   } else { document.getElementById("p5js_editor").style.display = "none"; }
+  if (localStorage.WindowsU_DefendYourKingdomApplication == "Installed") {
+    document.getElementById("DefendYourKingdom").style.display = "block";
+  } else { document.getElementById("DefendYourKingdom").style.display = "none"; }
   if (localStorage.WindowsU_PokemonRedApplication == "Installed") {
     document.getElementById("PokemonRed").style.display = "block";
   } else { document.getElementById("PokemonRed").style.display = "none"; }

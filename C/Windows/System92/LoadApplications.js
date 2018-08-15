@@ -1,6 +1,7 @@
 function defaultapplicationsinstall() {
   localStorage.WindowsU_ArcadeApplication = "Installed";
   localStorage.WindowsU_p5js_editorApplication = "Installed";
+  localStorage.WindowsU_DefendYourKingdomApplication = "Installed";
   localStorage.WindowsU_PokemonRedApplication = "Installed";
 }
 function loaddesktopapplication() {

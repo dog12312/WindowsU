@@ -12,6 +12,11 @@
     <a style="font-size:30;">P5 Javascript Editor</a>
     <a style="font-size:15;" onclick="localStorage.WindowsU_p5js_editorApplication='uninstalled';window.location.reload();">Uninstall</a>
   </div>
+  <div id="DefendYourKingdom" style="display:none;height:90;">
+    <img style="float:left;" src="https://dogindustrialstudios.github.io/WindowsU/C/Program-Files/Defend%20Your%20Kingdom/icon.png" alt="DYK" width="80" height="80">
+    <a style="font-size:30;">Defend Your Kingdom</a>
+    <a style="font-size:15;" onclick="localStorage.WindowsU_DefendYourKingdomApplication='uninstalled';window.location.reload();">Uninstall</a>
+  </div>
   <div id="PokemonRed" style="display:none;height:90;">
     <img style="float:left;" src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a6/Pok%C3%A9mon_box_art_-_Red_Version.png/220px-Pok%C3%A9mon_box_art_-_Red_Version.png" ondblclick="OpenWindow('/Arcade/Game/GameBoy/Pokemon/Red');" alt="Game" width="80" height="80">
     <a style="font-size:30;">Pokemon Fire Red</a>
@@ -40,6 +45,9 @@
     }
     if (localStorage.WindowsU_p5js_editorApplication == "Installed") {
       document.getElementById("p5js_editor").style.display = "block";
+    }
+    if (localStorage.WindowsU_DefendYourKingdomApplication == "Installed") {
+      document.getElementById("DefendYourKingdom").style.display = "block";
     }
     if (localStorage.WindowsU_PokemonRedApplication == "Installed") {
       document.getElementById("PokemonRed").style.display = "block";

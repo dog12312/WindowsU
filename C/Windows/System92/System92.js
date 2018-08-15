@@ -37,13 +37,15 @@ if (localStorage.WindowsU_Color == null) {
 }
 
 function Clock() {
-    var today = new Date();
+    var d = new Date();
+    document.getElementById("TaskbarClock").innerHTML = d.toLocaleTimeString();
+    /*var today = new Date();
     var h = today.getHours();
     var m = today.getMinutes();
     var s = today.getSeconds();
     m = checkTime(m);
     s = checkTime(s);
-    document.getElementById('TaskbarClock').innerHTML = h + ":" + m + ":" + s;
+    document.getElementById('TaskbarClock').innerHTML = h + ":" + m + ":" + s;*/
 }
 function checkTime(i) {
     if (i < 10) {i = "0" + i};

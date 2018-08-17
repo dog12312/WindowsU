@@ -87,6 +87,17 @@ window.addEventListener("error", handleError, true);
 
 function handleError(evt) {
   ErrorSound.play();
+  if (localStorage.debug == "1") {
+    if (evt.message) { // Chrome sometimes provides this
+      alert("error: "+evt.message +" at linenumber: "+evt.lineno+" of file: "+evt.filename);
+    } else {
+      alert("error: "+evt.type+" from element: "+(evt.srcElement || evt.target));
+    }
+  }
+}
+
+/*function handleError(evt) {
+  ErrorSound.play();
   var ErrorWindow = window.open("", "ErrorWindow", "width=600,height=200");
   ErrorWindow.document.write("<title>Error</tile>");
   if (localStorage.debug == "1") {
@@ -97,3 +108,4 @@ function handleError(evt) {
     }
   }
 }
+*/

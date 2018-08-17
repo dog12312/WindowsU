@@ -100,11 +100,9 @@ function handleError(evt) {
   ErrorSound.play();
   var ErrorWindow = window.open("", "ErrorWindow", "width=600,height=200");
   ErrorWindow.document.write("<title>Error</title>");
-  if (localStorage.debug == "1") {
     if (evt.message) { // Chrome sometimes provides this
       ErrorWindow.document.write("<p>"+"error: "+evt.message +" at linenumber: "+evt.lineno+" of file: "+evt.filename+"</p>");
     } else {
       ErrorWindow.document.write("<p>"+"error: "+evt.type+" from element: "+(evt.srcElement || evt.target)+"</p>");
     }
-  }
 }

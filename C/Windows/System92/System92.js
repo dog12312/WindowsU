@@ -85,7 +85,7 @@ var ErrorSound = new Audio('https://dogindustrialstudios.github.io/Arcade/Server
 
 window.addEventListener("error", handleError, true);
 
-function handleError(evt) {
+/*function handleError(evt) {
   ErrorSound.play();
   if (localStorage.debug == "1") {
     if (evt.message) { // Chrome sometimes provides this
@@ -94,9 +94,9 @@ function handleError(evt) {
       alert("error: "+evt.type+" from element: "+(evt.srcElement || evt.target));
     }
   }
-}
+}*/
 
-/*function handleError(evt) {
+function handleError(evt) {
   ErrorSound.play();
   var ErrorWindow = window.open("", "ErrorWindow", "width=600,height=200");
   ErrorWindow.document.write("<title>Error</tile>");
@@ -108,4 +108,3 @@ function handleError(evt) {
     }
   }
 }
-*/

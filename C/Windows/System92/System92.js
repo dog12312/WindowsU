@@ -21,6 +21,10 @@ function hideLoginScreen() {
 }
 function showDesktop() {
     document.getElementById("Desktop").style.display = "block";
+    clippy.load('Rover', function(agent) {
+        // Do anything with the loaded agent
+        agent.show();
+    });
 }
 function hideDesktop() {
     document.getElementById("Desktop").style.display = "none";
@@ -67,12 +71,7 @@ if (WindowsUAccountPassword != "" || WindowsUAccountPassword != null) {
   } else {alert('Wrong Password. ' + PasswordEntered + ' is not right.');}
 }
   else
-  { hideLoginScreen();showDesktop();
-       clippy.load('Rover', function(agent) {
-        // Do anything with the loaded agent
-        agent.show();
-    });
-  }
+  { hideLoginScreen();showDesktop(); }
 }
 
 var Window;

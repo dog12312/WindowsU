@@ -65,7 +65,14 @@ if (WindowsUAccountPassword != "" || WindowsUAccountPassword != null) {
     showDesktop();
     loaddesktopapplication();
   } else {alert('Wrong Password. ' + PasswordEntered + ' is not right.');}
-} else { hideLoginScreen();showDesktop();agent.show(); }
+}
+  else
+  { hideLoginScreen();showDesktop();
+       clippy.load('Rover', function(agent) {
+        // Do anything with the loaded agent
+        agent.show();
+    });
+  }
 }
 
 var Window;

@@ -109,7 +109,7 @@ function handleError(evt) {
   ErrorSound.play();
   var ErrorWindow = window.open("", "ErrorWindow", "width=600,height=200");
   ErrorWindow.document.write("<title>Error</title>");
-  ErrorWindow.document.write("<link rel='shortcut icon' href='/WindowsU/C/Windows/System92/icons/Close.ico' type='image/x-icon'>");
+  ErrorWindow.document.write("<link rel='shortcut icon' href='https://dogindustrialstudios.github.io/WindowsU/C/Windows/System92/icons/Close.ico' type='image/x-icon'>");
     if (evt.message) { // Chrome sometimes provides this
       ErrorWindow.document.write("<p>"+"error: "+evt.message +" at linenumber: "+evt.lineno+" of file: "+evt.filename+"</p>");
     } else {

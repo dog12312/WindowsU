@@ -76,10 +76,10 @@ if (WindowsUAccountPassword != "" || WindowsUAccountPassword != null) {
 
 var Window;
 function OpenWindow(url) {
+  agent.play('Searching');
   document.getElementById("Window").style.display = "block";
   Window = document.getElementById("WindowContent");
   Window.src = url;
-  agent.Play('Thinking');
 }
 function CloseWindow() {
   Window = document.getElementById("WindowContent");

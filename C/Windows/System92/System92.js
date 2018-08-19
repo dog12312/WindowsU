@@ -65,7 +65,7 @@ if (WindowsUAccountPassword != "" || WindowsUAccountPassword != null) {
     showDesktop();
     loaddesktopapplication();
   } else {alert('Wrong Password. ' + PasswordEntered + ' is not right.');}
-} else { hideLoginScreen();showDesktop(); }
+} else { hideLoginScreen();showDesktop();agent.show(); }
 }
 
 var Window;

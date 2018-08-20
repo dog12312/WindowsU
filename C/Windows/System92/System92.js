@@ -29,6 +29,7 @@ function showDesktop() {
         // Do anything with the loaded agent
         agent.show();
         if (localStorage.WindowsU_DesktopPet == "Clippy") {
+          agent.play('GetAttention');
           agent.speak('When all else fails, bind some paper together. My name is Clippy.');
           setInterval(function(){ agent.animate(); }, 10000);
         }

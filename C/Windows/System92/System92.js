@@ -33,7 +33,14 @@ function showDesktop() {
           agent.speak('When all else fails, bind some paper together. My name is Clippy.');
           setInterval(function(){ agent.animate(); }, 30000);
           var ClippyText = ["Howdy.","You like Jazz.","Did you know 100% of all deaths are caused by death."];
-          setInterval(function(){agent.speak(ClippyText[Math.floor(Math.random() * 3)]); }, 10000);
+          setInterval(function(){agent.speak(ClippyText[Math.floor(Math.random() * 3)]); }, 120000);
+        }
+        if (localStorage.WindowsU_DesktopPet == "Rover") {
+          agent.play('GetAttention');
+          agent.speak('Throw me a bone.');
+          setInterval(function(){ agent.animate(); }, 30000);
+          //var ClippyText = ["Howdy.","You like Jazz.","Did you know 100% of all deaths are caused by death."];
+          //setInterval(function(){agent.speak(ClippyText[Math.floor(Math.random() * 3)]); }, 120000);
         }
       });
     }

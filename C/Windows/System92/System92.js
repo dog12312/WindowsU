@@ -21,8 +21,11 @@ function hideLoginScreen() {
 }
 function showDesktop() {
     document.getElementById("Desktop").style.display = "block";
+  if (localStorage.WindowsU_DesktopPet == null) {
+    localStorage.WindowsU_DesktopPet = "Rover";
+  }
     if (localStorage.WindowsU_DesktopPetEnabled == 1) {
-      clippy.load('Rover', function(agent) {
+      clippy.load(localStorage.WindowsU_DesktopPet, function(agent) {
         // Do anything with the loaded agent
         agent.show();
       });

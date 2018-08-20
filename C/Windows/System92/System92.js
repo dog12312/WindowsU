@@ -28,6 +28,9 @@ function showDesktop() {
       clippy.load(localStorage.WindowsU_DesktopPet, function(agent) {
         // Do anything with the loaded agent
         agent.show();
+        if (localStorage.WindowsU_DesktopPet == "Clippy") {
+          agent.speak('When all else fails, bind some paper together. My name is Clippy.');
+        }
       });
     }
 }

@@ -30,6 +30,7 @@ function showDesktop() {
         agent.show();
         if (localStorage.WindowsU_DesktopPet == "Clippy") {
           agent.speak('When all else fails, bind some paper together. My name is Clippy.');
+          setInterval(function(){ agent.animate(); }, 10000);
         }
       });
     }

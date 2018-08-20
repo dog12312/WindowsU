@@ -21,10 +21,12 @@ function hideLoginScreen() {
 }
 function showDesktop() {
     document.getElementById("Desktop").style.display = "block";
-    clippy.load('Rover', function(agent) {
+    if (localStorage.WindowsU_DesktopPetEnabled == 1) {
+      clippy.load('Rover', function(agent) {
         // Do anything with the loaded agent
         agent.show();
-    });
+      });
+    }
 }
 function hideDesktop() {
     document.getElementById("Desktop").style.display = "none";

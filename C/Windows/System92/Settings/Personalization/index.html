@@ -55,14 +55,14 @@
   function Color() {
     document.getElementById("topwindowbar").style.backgroundColor = localStorage.WindowsU_Color;
   }
-  if (localStorage.WindowsU_DesktopPet == 1) {
+  if (localStorage.WindowsU_DesktopPetEnabled == 1) {
     document.getElementById("DesktopPet").checked = true;
   } else {document.getElementById("DesktopPet").checked = false;}
   setInterval(Update, 500);
   function Update() {
     if (document.getElementById("DesktopPet").checked == true) {
-      localStorage.WindowsU_DesktopPet = 1;
-    } else {localStorage.WindowsU_DesktopPet = 0;}
+      localStorage.WindowsU_DesktopPetEnabled = 1;
+    } else {localStorage.WindowsU_DesktopPetEnabled = 0;}
   }
 </script>
 

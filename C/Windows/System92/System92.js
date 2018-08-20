@@ -81,9 +81,9 @@ if (WindowsUAccountPassword != "" || WindowsUAccountPassword != null) {
 
 var Window;
 function OpenWindow(url) {
-  //clippy.load('Rover', function(agent) {
+  /*clippy.load('Rover', function(agent) {
       clippy.play('Searching');
-  //});
+  });*/
   document.getElementById("Window").style.display = "block";
   Window = document.getElementById("WindowContent");
   Window.src = url;

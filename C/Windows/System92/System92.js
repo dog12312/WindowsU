@@ -82,12 +82,12 @@ if(WindowsUAccountPassword == null) {
   WindowsUAccountPassword = "";
 }
 function ShowHideLoginInput() {
-  if (WindowsUAccountPassword != null || WindowsUAccountPassword != "") {
-        document.getElementById("PasswordInput").style.display = "block";
-    console.log("on");
-  } else {
+  if (WindowsUAccountPassword == "" || WindowsUAccountPassword == null) {
         document.getElementById("PasswordInput").style.display = "none";
-    Console.log("off");
+    console.log("off");
+  } else {
+        document.getElementById("PasswordInput").style.display = "block";
+    Console.log("on");
   }
 }
 function CheckPassword() {

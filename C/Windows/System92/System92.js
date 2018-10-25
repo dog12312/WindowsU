@@ -1,5 +1,6 @@
 function Start() {
   setInterval(SystemRun, 0);
+  console.log("Strted System")
 }
 
 function SystemRun() {

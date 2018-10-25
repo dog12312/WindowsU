@@ -84,8 +84,10 @@ if(WindowsUAccountPassword == null) {
 function ShowHideLoginInput() {
   if (WindowsUAccountPassword != null || WindowsUAccountPassword != "") {
         document.getElementById("PasswordInput").style.display = "block";
+    console.log("on");
   } else {
         document.getElementById("PasswordInput").style.display = "none";
+    Console.log("off");
   }
 }
 function CheckPassword() {

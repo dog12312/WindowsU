@@ -17,6 +17,7 @@ function hideBootScreen() {
 }
 function showLoginScreen() {
     document.getElementById("Login").style.display = "block";
+    Start();
 }
 function hideLoginScreen() {
     document.getElementById("Login").style.display = "none";

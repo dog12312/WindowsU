@@ -89,7 +89,7 @@ function ShowHideLoginInput() {
     console.log("off");
   } else {
         document.getElementById("PasswordInput").style.display = "block";
-    Console.log("on");
+    console.log("on");
   }
 }
 function CheckPassword() {
